@@ -9,6 +9,9 @@ export const Register = (props) => {
     const verifyPassword = useRef()
     const passwordDialog = useRef()
     const conflictDialog = useRef()
+    const height = useRef()
+    const weight = useRef()
+    const age = useRef()
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
@@ -33,7 +36,11 @@ export const Register = (props) => {
                             body: JSON.stringify({
                                 email: email.current.value,
                                 password: password.current.value,
-                                name: `${firstName.current.value} ${lastName.current.value}`
+                                name: `${firstName.current.value} ${lastName.current.value}`,
+                                height: height.current.value,
+                                weight: weight.current.value,
+                                age: age.current.value
+                                
                             })
                         })
                             .then(_ => _.json())
@@ -76,6 +83,18 @@ export const Register = (props) => {
                 <fieldset>
                     <label htmlFor="lastName"> Last Name </label>
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="height"> Enter Height </label>
+                    <input ref={height} type="text" name="height" className="form-control" placeholder="Height" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="weight"> Enter Weight </label>
+                    <input ref={weight} type="text" name="weight" className="form-control" placeholder="Weight" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="age"> Enter Age </label>
+                    <input ref={age} type="text" name="age" className="form-control" placeholder="Age" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="inputEmail"> Email address </label>

@@ -15,5 +15,16 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "email": "kelly@email.com",
+      "password": "check",
+      "name": "Kelly Sepulveda",
+      "height": "5'8",
+      "weight": "130",
+      "age": "27",
+      "id": 1
+    }
+  ]
 }
