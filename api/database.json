@@ -25,6 +25,36 @@
       "weight": "130",
       "age": "27",
       "id": 1
+    },
+    {
+      "email": "debby@email.com",
+      "password": "password",
+      "name": "Debby Dobbs",
+      "height": "5'6",
+      "weight": "130",
+      "age": "28",
+      "id": 2
+    },
+    {
+      "email": "shely@email.com",
+      "password": "password",
+      "name": "shelely sheelly",
+      "height": "9'00",
+      "weight": "200",
+      "age": "30",
+      "id": 3
+    }
+  ],
+  "contacts": [
+    {
+      "name": "clara",
+      "phoneNumber": "678-2234-5434",
+      "id": 1
+    },
+    {
+      "name": "asas",
+      "phoneNumber": "453635",
+      "id": 2
     }
   ]
 }
