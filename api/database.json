@@ -43,6 +43,33 @@
       "weight": "200",
       "age": "30",
       "id": 3
+    },
+    {
+      "email": "greg@email.com",
+      "password": "check2",
+      "name": "darrel greg",
+      "height": "87",
+      "weight": "230",
+      "age": "43",
+      "id": 4
+    },
+    {
+      "email": "asfdas@asdga",
+      "password": "check",
+      "name": "asdfas asfas",
+      "height": "asda",
+      "weight": "asdasg",
+      "age": "asdasg",
+      "id": 5
+    },
+    {
+      "email": "sandy@email",
+      "password": "check1",
+      "name": "sandy greg",
+      "height": "65",
+      "weight": "180",
+      "age": "32",
+      "id": 6
     }
   ],
   "contacts": [
@@ -55,6 +82,26 @@
       "name": "asas",
       "phoneNumber": "453635",
       "id": 2
+    },
+    {
+      "name": "asdfas",
+      "phoneNumber": "asdasdf",
+      "id": 3
+    },
+    {
+      "name": "asdfas",
+      "phoneNumber": "asdasg",
+      "id": 4
+    },
+    {
+      "name": "shirly",
+      "phoneNumber": "345-453-4543",
+      "id": 5
+    },
+    {
+      "name": "sandra",
+      "phoneNumber": "879-987-2346",
+      "id": 6
     }
   ]
 }

@@ -7,7 +7,8 @@ export const ContactForm = (props) => {
   const name = useRef(null);
   const phoneNumber = useRef(null);
 
-  const createNewContact = () => {
+  const createNewContact = (e) => {
+    e.preventDefault();
     addContact({
       name: name.current.value,
       phoneNumber: phoneNumber.current.value

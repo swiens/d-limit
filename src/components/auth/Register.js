@@ -48,7 +48,7 @@ export const Register = (props) => {
                                 if (createdUser.hasOwnProperty("id")) {
                                     // The user id is saved under the key app_user_id in local Storage. Change below if needed!
                                     localStorage.setItem("app_user_id", createdUser.id)
-                                    props.history.push("/")
+                                    props.history.push("/create-contact")
                                 }
                             })
                     }
