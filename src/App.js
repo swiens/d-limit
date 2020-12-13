@@ -6,7 +6,10 @@ import { Register } from "./components/auth/Register";
 import { Route, Redirect } from "react-router-dom";
 import { ContactForm } from "./components/contacts/ContactForm";
 import { ContactProvider } from "./components/contacts/ContactProvider";
+import {ContactList} from "./components/contacts/ContactList";
 import { Home } from "./components/home/Home";
+import { EditContactForm } from "./components/contacts/EditContactForm";
+import {EditUserForm} from "./components/user/EditUserForm"
 
 function App() {
   return (
@@ -24,7 +27,18 @@ function App() {
                     path="/create-contact"
                     render={(props) => <ContactForm {...props} />}
                   />
+                  <Route
+                  exact 
+                  path="/contacts"
+                  render={(props)=> <ContactList {...props} />}
+                  />
+                  <Route
+                  path="/contacts/:contactId(\d+)"
+                  render={(props)=> <EditContactForm {...props} />}
+                  />
                 </ContactProvider>
+
+            <Route path="/edit-profile" render={(props) => <EditUserForm {...props} />} />
               </>
             );
           } else {
