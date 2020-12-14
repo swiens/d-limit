@@ -10,6 +10,8 @@ import {ContactList} from "./components/contacts/ContactList";
 import { Home } from "./components/home/Home";
 import { EditContactForm } from "./components/contacts/EditContactForm";
 import {EditUserForm} from "./components/user/EditUserForm"
+import {EventDrinkProvider} from "./components/eventDrinks/EventDrinkProvider"
+import {DrinkingPage} from "./components/drinking/DrinkingPage"
 
 function App() {
   return (
@@ -20,7 +22,10 @@ function App() {
           if (localStorage.getItem("app_user_id")) {
             return (
               <>
+                <EventDrinkProvider>
                 <Route exact path="/" render={(props) => <Home {...props} />} />
+                <Route path="/drinking" render={(props) => <DrinkingPage {...props} />} />
+                </EventDrinkProvider>
 
                 <ContactProvider>
                   <Route
@@ -38,7 +43,7 @@ function App() {
                   />
                 </ContactProvider>
 
-            <Route path="/edit-profile" render={(props) => <EditUserForm {...props} />} />
+            
               </>
             );
           } else {

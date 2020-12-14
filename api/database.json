@@ -1,21 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
       "email": "kelly@email.com",
@@ -70,43 +53,59 @@
       "weight": "180",
       "age": "32",
       "id": 6
+    },
+    {
+      "email": "scott@email.com",
+      "password": "password",
+      "name": "Scott Silver",
+      "height": "7'3",
+      "weight": "200",
+      "age": "40",
+      "id": 7
+    },
+    {
+      "email": "ted@email.com",
+      "password": "check",
+      "name": "ted mullins",
+      "height": "45",
+      "weight": "130",
+      "age": "23",
+      "id": 8
     }
   ],
   "contacts": [
     {
-      "name": "clara",
-      "phoneNumber": "678-2234-5434",
+      "name": "stef",
+      "phoneNumber": "897-324-8987",
+      "userId": 8,
       "id": 1
+    }
+  ],
+  "events": [
+    {
+      "userId": 8,
+      "startTime": 1607968410695,
+      "endTime": null,
+      "id": 1
+    }
+  ],
+  "eventDrinks": [],
+  "drinks": [
+    {
+      "id": 1,
+      "type": "high gravity beer"
     },
     {
-      "name": "asas",
-      "phoneNumber": "453635",
-      "id": 2
+      "id": 2,
+      "type": "low gravity beer"
     },
     {
-      "name": "asdfas",
-      "phoneNumber": "asdasdf",
-      "id": 3
+      "id": 3,
+      "type": "wine"
     },
     {
-      "name": "asdfas",
-      "phoneNumber": "asdasg",
-      "id": 4
-    },
-    {
-      "name": "shirly",
-      "phoneNumber": "345-453-4543",
-      "id": 5
-    },
-    {
-      "name": "sandra",
-      "phoneNumber": "879-987-2346",
-      "id": 6
-    },
-    {
-      "name": "fart",
-      "phoneNumber": "123",
-      "id": 7
+      "id": 4,
+      "type": "liquor"
     }
   ]
 }

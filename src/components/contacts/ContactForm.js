@@ -11,7 +11,8 @@ export const ContactForm = (props) => {
     e.preventDefault();
     addContact({
       name: name.current.value,
-      phoneNumber: phoneNumber.current.value
+      phoneNumber: phoneNumber.current.value,
+      userId: parseInt(localStorage.getItem("app_user_id"))
     })
       .then(() => props.history.push("/"))
   }
