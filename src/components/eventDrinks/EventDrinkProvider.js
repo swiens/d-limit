@@ -6,8 +6,8 @@ export const EventDrinkProvider = (props) => {
     const[eventDrinks, setEventDrinks] = useState([])
     const[drinks, setDrinks] = useState([])
 
-    const getEventDrinks = () => {
-        return fetch("http://localhost:8088/eventDrinks")
+    const getEventDrinks = (eventId) => {
+        return fetch(`http://localhost:8088/eventDrinks?eventId=${eventId}`)
             .then(res => res.json())
             .then(setEventDrinks)
     }

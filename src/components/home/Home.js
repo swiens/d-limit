@@ -6,14 +6,24 @@ import {EventContext} from "../eventDrinks/EventDrinkProvider"
 export const Home = (props) => {
     const {addEvent} = useContext(EventContext)
 
+    const startDrinking = () => {
+        addEvent()
+        .then((newEvent) => {
+            return props.history.push(`/drinking/${newEvent.id}`)
+        })
+    }
     return(
         <section>
         <h1>Home Page</h1>
         <div><button id="edit--profile"> 
         <Link to="/edit-profile">Edit Profile</Link>
         </button></div>
-        <div><button onClick={addEvent} id="start--drinking"> Start Drinking</button></div>
+        <div><button onClick={startDrinking} id="start--drinking"> Start Drinking</button></div>
         </section>
 
     )
-}
+}    
+    
+
+    
+

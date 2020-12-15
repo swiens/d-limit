@@ -87,14 +87,56 @@
       "startTime": 1607968410695,
       "endTime": null,
       "id": 1
+    },
+    {
+      "userId": 8,
+      "startTime": 1608052446239,
+      "endTime": null,
+      "id": 2
+    },
+    {
+      "userId": 8,
+      "startTime": 1608052606073,
+      "endTime": null,
+      "id": 3
+    },
+    {
+      "userId": 8,
+      "startTime": 1608053300953,
+      "endTime": null,
+      "id": 4
+    },
+    {
+      "userId": 8,
+      "startTime": 1608053427525,
+      "endTime": null,
+      "id": 5
     }
   ],
   "eventDrinks": [
     {
-      "id":1,
       "drinkId": 1,
-      "eventId": 1,
-      "timeStamp": ""
+      "eventId": 3,
+      "timeDrank": 1608053251414,
+      "id": 1
+    },
+    {
+      "drinkId": 2,
+      "eventId": 3,
+      "timeDrank": 1608053252898,
+      "id": 2
+    },
+    {
+      "drinkId": 3,
+      "eventId": 3,
+      "timeDrank": 1608053254631,
+      "id": 3
+    },
+    {
+      "drinkId": 4,
+      "eventId": 3,
+      "timeDrank": 1608053256036,
+      "id": 4
     }
   ],
   "drinks": [

@@ -24,7 +24,7 @@ function App() {
               <>
                 <EventDrinkProvider>
                 <Route exact path="/" render={(props) => <Home {...props} />} />
-                <Route exact path="/drinking/(\d+)" render={(props) => <DrinkingPage {...props} />} />
+                <Route exact path="/drinking/:eventId(\d+)" render={(props) => <DrinkingPage {...props} />} />
                 </EventDrinkProvider>
 
                 <ContactProvider>
