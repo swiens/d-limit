@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import {EventContext} from "../eventDrinks/EventDrinkProvider"
 
 
-export const Home = () => {
+export const Home = (props) => {
     const {addEvent} = useContext(EventContext)
 
     return(

@@ -89,7 +89,14 @@
       "id": 1
     }
   ],
-  "eventDrinks": [],
+  "eventDrinks": [
+    {
+      "id":1,
+      "drinkId": 1,
+      "eventId": 1,
+      "timeStamp": ""
+    }
+  ],
   "drinks": [
     {
       "id": 1,
