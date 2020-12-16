@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { EventContext } from "../eventDrinks/EventDrinkProvider";
 
 export const Home = (props) => {
-  const { addEvent } = useContext(EventContext);
+  const { addEvent, getEvents } = useContext(EventContext);
 
   const currentEventId = localStorage.getItem("currentEvent");
 
@@ -18,7 +18,6 @@ export const Home = (props) => {
   };
 
   
-  console.log(currentEventId);
   return (
     <section>
       <h1>Home Page</h1>
@@ -40,6 +39,14 @@ export const Home = (props) => {
           </button>
         )}
       </div>
+      useEffect(() => {
+        getEvents(setEvents)
+    }, [])
+      <div>
+          
+      </div>
+
+
     </section>
   );
 };

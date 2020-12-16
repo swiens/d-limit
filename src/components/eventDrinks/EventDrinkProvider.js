@@ -5,11 +5,18 @@ export const EventContext = React.createContext();
 export const EventDrinkProvider = (props) => {
   const [eventDrinks, setEventDrinks] = useState([]);
   const [drinks, setDrinks] = useState([]);
+  const [events, setEvents] = useState([]);
 
   const getEventDrinks = (eventId) => {
     return fetch(`http://localhost:8088/eventDrinks?eventId=${eventId}`)
       .then((res) => res.json())
       .then(setEventDrinks);
+  };
+  const getEvents = () => {
+    const userId= parseInt(localStorage.getItem("app_user_id"))
+    return fetch(`http://localhost:8088/events?userId=${userId}`)
+      .then((res) => res.json())
+      .then(setEvents);
   };
   const getDrinks = () => {
     return fetch("http://localhost:8088/drinks")
@@ -79,7 +86,9 @@ export const EventDrinkProvider = (props) => {
         getDrinks,
         drinks,
         deleteEventDrink,
-        endEvent
+        endEvent,
+        getEvents,
+        events
       }}
     >
       {props.children}
