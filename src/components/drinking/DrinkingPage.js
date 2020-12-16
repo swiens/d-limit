@@ -1,27 +1,32 @@
 import React, {useContext,useEffect, useRef} from "react"
 import {EventContext} from "../eventDrinks/EventDrinkProvider"
+import moment from "moment"
 
 
 export const DrinkingPage = (props) => {
     const {addEventDrink, drinks, getDrinks} = useContext(EventContext)
 
     const drink = useRef(null)
-
+    const eventId = parseInt(props.match.params.eventId)
     useEffect(() => {
         getDrinks()
     }, [])
 // i need to get an event id
     const eventDrink = (event) => {
         const drinkId = parseInt(event.target.id)
-        const eventId = parseInt(props.match.params.eventId)
+        
         const newEventDrink = {
             drinkId: drinkId,
             eventId: eventId,
-            timeDrank: Date.now() 
+            timeDrank: moment.now() 
         }
         addEventDrink(newEventDrink)
     
     }
+
+    const editDrinks = () => {
+        return props.history.push(`/drinking/drinks/${eventId}`);
+    };
 
     return(
     
@@ -38,6 +43,7 @@ export const DrinkingPage = (props) => {
 
         }
         <button>Can I drive?</button>
+        <button onClick={editDrinks}>Edit Drinks</button>
         </section>
     )
 }
