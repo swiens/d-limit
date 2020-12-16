@@ -34,6 +34,21 @@ export const EventDrinkProvider = (props) => {
       })
     
   };
+  const endEvent = (eventId) => {
+    return fetch(`http://localhost:8088/events/${eventId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        endTime: Date.now(),
+      }),
+    }).then((res) => res.json())
+      .then(() => {
+        localStorage.removeItem("currentEvent") 
+      })
+    
+  };
 
   const addEventDrink = (drink) => {
     return fetch("http://localhost:8088/eventDrinks", {
@@ -63,7 +78,8 @@ export const EventDrinkProvider = (props) => {
         addEventDrink,
         getDrinks,
         drinks,
-        deleteEventDrink
+        deleteEventDrink,
+        endEvent
       }}
     >
       {props.children}

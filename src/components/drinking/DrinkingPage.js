@@ -28,6 +28,10 @@ export const DrinkingPage = (props) => {
         return props.history.push(`/drinking/drinks/${eventId}`);
     };
 
+    const canIDriveButton = () => {
+        return props.history.push(`/drinking/results/${eventId}`);
+    };
+
     return(
     
         <section>
@@ -42,8 +46,8 @@ export const DrinkingPage = (props) => {
             ))
 
         }
-        <button>Can I drive?</button>
-        <button onClick={editDrinks}>Edit Drinks</button>
+        <button onClick={canIDriveButton}>Can I drive?</button>
+        <button onClick={editDrinks}>View/Edit Drinks</button>
         </section>
     )
 }

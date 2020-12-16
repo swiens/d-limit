@@ -1,1 +1,0 @@
-//<Route path="/edit-profile" render={(props) => <EditUserForm {...props} />} />

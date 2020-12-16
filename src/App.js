@@ -13,6 +13,8 @@ import {EditUserForm} from "./components/user/EditUserForm"
 import {EventDrinkProvider} from "./components/eventDrinks/EventDrinkProvider"
 import {DrinkingPage} from "./components/drinking/DrinkingPage"
 import {DrinkList} from "./components/drinking/DrinkList"
+import {ResultsPage} from "./components/drinking/ResultsPage"
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
                 <Route exact path="/" render={(props) => <Home {...props} />} />
                 <Route exact path="/drinking/:eventId(\d+)" render={(props) => <DrinkingPage {...props} />} />
                 <Route path="/drinking/drinks/:eventId(\d+)" render={(props) => <DrinkList {...props}/>} />
+                <Route path="/drinking/results/:eventId(\d+)" render={(props) => <ResultsPage {...props}/>} />
                 </EventDrinkProvider>
 
                 <ContactProvider>
