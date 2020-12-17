@@ -3,7 +3,7 @@ import React, { useState } from "react"
 export const UserContext = React.createContext()
 
 export const UserProvider = (props) => {
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState({})
     
     const getUser = () => {
         const userId = localStorage.getItem("app_user_id")

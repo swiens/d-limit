@@ -7,7 +7,8 @@ export const ContactProvider = (props) => {
     const [currentContact, setCurrentContact] = useState([])
 
     const getContacts = () => {
-        return fetch("http://localhost:8088/contacts")
+        const user = parseInt(localStorage.getItem("app_user_id"))
+        return fetch(`http://localhost:8088/contacts?userId=${user}`)
             .then(res => res.json())
             .then(setContacts)
     }

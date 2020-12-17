@@ -178,8 +178,26 @@
     {
       "userId": 1,
       "startTime": 1608181344611,
-      "endTime": null,
+      "endTime": 1608223927677,
       "id": 13
+    },
+    {
+      "userId": 1,
+      "startTime": 1608224512988,
+      "endTime": 1608224526046,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "startTime": 1608227879533,
+      "endTime": 1608227928252,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "startTime": 1608227931946,
+      "endTime": null,
+      "id": 16
     }
   ],
   "eventDrinks": [
@@ -428,6 +446,36 @@
       "eventId": 13,
       "timeDrank": 1608181411052,
       "id": 41
+    },
+    {
+      "drinkId": 1,
+      "eventId": 14,
+      "timeDrank": 1608224514423,
+      "id": 42
+    },
+    {
+      "drinkId": 2,
+      "eventId": 14,
+      "timeDrank": 1608224515552,
+      "id": 43
+    },
+    {
+      "drinkId": 4,
+      "eventId": 15,
+      "timeDrank": 1608227880878,
+      "id": 44
+    },
+    {
+      "drinkId": 3,
+      "eventId": 15,
+      "timeDrank": 1608227881512,
+      "id": 45
+    },
+    {
+      "drinkId": 2,
+      "eventId": 16,
+      "timeDrank": 1608229828767,
+      "id": 48
     }
   ],
   "drinks": [

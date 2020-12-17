@@ -27,6 +27,11 @@ export const Home = (props) => {
         </button>
       </div>
       <div>
+        <button id="edit--profile">
+          <Link to="/contacts">Edit Contacts</Link>
+        </button>
+      </div>
+      <div>
         {currentEventId && (
           <button onClick={continueDrinking} id="continue--drinking">
             Continue Drinking
