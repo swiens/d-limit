@@ -4,9 +4,13 @@ import { EventContext } from "../eventDrinks/EventDrinkProvider";
 import moment from "moment";
 
 export const DrinkList = (props) => {
-  const { getEventDrinks, eventDrinks, getDrinks, drinks, deleteEventDrink } = useContext(
-    EventContext
-  );
+  const {
+    getEventDrinks,
+    eventDrinks,
+    getDrinks,
+    drinks,
+    deleteEventDrink,
+  } = useContext(EventContext);
 
   const eventId = parseInt(props.match.params.eventId);
 
@@ -16,15 +20,19 @@ export const DrinkList = (props) => {
   }, []);
 
   const deleteDrinkButton = (event) => {
-    const id = event.target.id 
-    deleteEventDrink(id, eventId)
-  }
-
+    const id = event.target.id;
+    deleteEventDrink(id, eventId);
+  };
+  const continueDrinkingButton = () => {
+    return props.history.push(`/drinking/${eventId}`);
+  };
 
   if (drinks.length === 0) return false;
   return (
     <div>
-      Drink List
+      <h3> Drink List</h3>
+
+      <button onClick={continueDrinkingButton}>Continue Drinking</button>
 
       <div className="drinks">
         {eventDrinks.map((currentEventDrink) => {
@@ -33,10 +41,17 @@ export const DrinkList = (props) => {
           });
           return (
             <div>
-              <hr /> 
+              <hr />
               <div>{foundDrink.type} </div>
-              <div> {moment(parseInt(currentEventDrink.timeDrank)).format("LTS")} </div>
-              <button onClick={deleteDrinkButton} id={currentEventDrink.id}>Delete Drink </button>
+              <div>
+                
+                {moment(parseInt(currentEventDrink.timeDrank)).format(
+                  "LTS"
+                )}
+              </div>
+              <button onClick={deleteDrinkButton} id={currentEventDrink.id}>
+                Delete Drink{" "}
+              </button>
             </div>
           );
         })}

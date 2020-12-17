@@ -71,6 +71,15 @@
       "weight": "130",
       "age": "23",
       "id": 8
+    },
+    {
+      "email": "Carl@email.com",
+      "password": "check",
+      "name": "Carl Carling",
+      "height": "5'6",
+      "weight": "160",
+      "age": "42",
+      "id": 9
     }
   ],
   "contacts": [
@@ -79,6 +88,18 @@
       "phoneNumber": "897-324-8987",
       "userId": 8,
       "id": 1
+    },
+    {
+      "name": "Kern",
+      "phoneNumber": "879-654-9087",
+      "userId": 9,
+      "id": 2
+    },
+    {
+      "name": "Joshua",
+      "phoneNumber": "9316399444",
+      "userId": 1,
+      "id": 3
     }
   ],
   "events": [
@@ -97,8 +118,68 @@
     {
       "userId": 1,
       "startTime": 1608143350574,
-      "endTime": null,
+      "endTime": 1608158054688,
       "id": 3
+    },
+    {
+      "userId": 1,
+      "startTime": 1608158080281,
+      "endTime": null,
+      "id": 4
+    },
+    {
+      "userId": 9,
+      "startTime": 1608158377810,
+      "endTime": null,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "startTime": 1608173395861,
+      "endTime": 1608173416494,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "startTime": 1608173424663,
+      "endTime": 1608173568913,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "startTime": 1608173646482,
+      "endTime": 1608173669777,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "startTime": 1608173771778,
+      "endTime": 1608173783933,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "startTime": 1608176262283,
+      "endTime": 1608181298402,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "startTime": 1608181301491,
+      "endTime": 1608181318388,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "startTime": 1608181321709,
+      "endTime": 1608181340807,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "startTime": 1608181344611,
+      "endTime": null,
+      "id": 13
     }
   ],
   "eventDrinks": [
@@ -155,6 +236,198 @@
       "eventId": 3,
       "timeDrank": 1608143353844,
       "id": 9
+    },
+    {
+      "drinkId": 4,
+      "eventId": 3,
+      "timeDrank": 1608158043741,
+      "id": 10
+    },
+    {
+      "drinkId": 3,
+      "eventId": 3,
+      "timeDrank": 1608158044744,
+      "id": 11
+    },
+    {
+      "drinkId": 2,
+      "eventId": 3,
+      "timeDrank": 1608158045874,
+      "id": 12
+    },
+    {
+      "drinkId": 1,
+      "eventId": 3,
+      "timeDrank": 1608158046760,
+      "id": 13
+    },
+    {
+      "drinkId": 1,
+      "eventId": 4,
+      "timeDrank": 1608158081796,
+      "id": 14
+    },
+    {
+      "drinkId": 2,
+      "eventId": 4,
+      "timeDrank": 1608158082360,
+      "id": 15
+    },
+    {
+      "drinkId": 2,
+      "eventId": 4,
+      "timeDrank": 1608158083021,
+      "id": 16
+    },
+    {
+      "drinkId": 4,
+      "eventId": 4,
+      "timeDrank": 1608158083868,
+      "id": 17
+    },
+    {
+      "drinkId": 1,
+      "eventId": 5,
+      "timeDrank": 1608158380646,
+      "id": 18
+    },
+    {
+      "drinkId": 1,
+      "eventId": 6,
+      "timeDrank": 1608173397161,
+      "id": 19
+    },
+    {
+      "drinkId": 2,
+      "eventId": 6,
+      "timeDrank": 1608173398020,
+      "id": 20
+    },
+    {
+      "drinkId": 3,
+      "eventId": 6,
+      "timeDrank": 1608173398938,
+      "id": 21
+    },
+    {
+      "drinkId": 4,
+      "eventId": 6,
+      "timeDrank": 1608173399959,
+      "id": 22
+    },
+    {
+      "drinkId": 3,
+      "eventId": 7,
+      "timeDrank": 1608173425733,
+      "id": 23
+    },
+    {
+      "drinkId": 4,
+      "eventId": 7,
+      "timeDrank": 1608173426548,
+      "id": 24
+    },
+    {
+      "drinkId": 2,
+      "eventId": 8,
+      "timeDrank": 1608173647793,
+      "id": 25
+    },
+    {
+      "drinkId": 1,
+      "eventId": 8,
+      "timeDrank": 1608173648539,
+      "id": 26
+    },
+    {
+      "drinkId": 4,
+      "eventId": 8,
+      "timeDrank": 1608173649720,
+      "id": 27
+    },
+    {
+      "drinkId": 1,
+      "eventId": 9,
+      "timeDrank": 1608173772857,
+      "id": 28
+    },
+    {
+      "drinkId": 4,
+      "eventId": 9,
+      "timeDrank": 1608173774072,
+      "id": 29
+    },
+    {
+      "drinkId": 4,
+      "eventId": 9,
+      "timeDrank": 1608173774704,
+      "id": 30
+    },
+    {
+      "drinkId": 4,
+      "eventId": 9,
+      "timeDrank": 1608173775358,
+      "id": 31
+    },
+    {
+      "drinkId": 1,
+      "eventId": 9,
+      "timeDrank": 1608173947925,
+      "id": 32
+    },
+    {
+      "drinkId": 2,
+      "eventId": 9,
+      "timeDrank": 1608173948956,
+      "id": 33
+    },
+    {
+      "drinkId": 3,
+      "eventId": 9,
+      "timeDrank": 1608173949737,
+      "id": 34
+    },
+    {
+      "drinkId": 4,
+      "eventId": 9,
+      "timeDrank": 1608173950667,
+      "id": 35
+    },
+    {
+      "drinkId": 1,
+      "eventId": 10,
+      "timeDrank": 1608177903567,
+      "id": 36
+    },
+    {
+      "drinkId": 2,
+      "eventId": 10,
+      "timeDrank": 1608177904198,
+      "id": 37
+    },
+    {
+      "drinkId": 1,
+      "eventId": 11,
+      "timeDrank": 1608181303728,
+      "id": 38
+    },
+    {
+      "drinkId": 1,
+      "eventId": 12,
+      "timeDrank": 1608181322982,
+      "id": 39
+    },
+    {
+      "drinkId": 2,
+      "eventId": 13,
+      "timeDrank": 1608181410111,
+      "id": 40
+    },
+    {
+      "drinkId": 3,
+      "eventId": 13,
+      "timeDrank": 1608181411052,
+      "id": 41
     }
   ],
   "drinks": [

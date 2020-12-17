@@ -1,5 +1,5 @@
 import React, { useRef, useContext, useEffect } from "react";
-import {ContactContext} from "./UserProvider"
+import {ContactContext} from "../contacts/ContactProvider"
 //import "./user.css"
 
 export const EditContactForm = (props) => {

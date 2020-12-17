@@ -1,50 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
-export const ContactContext = React.createContext()
+export const UserContext = React.createContext()
 
-export const ContactProvider = (props) => {
+export const UserProvider = (props) => {
     const [user, setUser] = useState([])
-    const [contacts, setContacts] = useState([])
-    const [currentContact, setCurrentContact] = useState([])
-
-    const getContacts = () => {
-        return fetch("http://localhost:8088/contacts")
+    
+    const getUser = () => {
+        const userId = localStorage.getItem("app_user_id")
+        return fetch(`http://localhost:8088/users/${userId}`)
             .then(res => res.json())
-            .then(setContacts)
-    }
-
-    const addContact = contact => {
-        return fetch("http://localhost:8088/contacts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(contact)
-        })
-    }
-
-    const editContact = contact => {
-        return fetch(`http://localhost:8088/contacts/${contact.id}`,{
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(contact)
-        })
-    }
-
-    const getContact = contactId => {
-        return fetch(`http://localhost:8088/contacts/${contactId}`) 
-            .then(res => res.json())
-            .then(setCurrentContact)
-        
+            .then(setUser)
     }
 
     return(
-        <ContactContext.Provider value={{
-            contacts, addContact, getContacts, editContact, currentContact, getContact, setCurrentContact
+        <UserContext.Provider value={{
+            getUser, user
         }}>
             {props.children}
-        </ContactContext.Provider>
+        </UserContext.Provider>
     )
 }

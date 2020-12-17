@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import moment from "moment"
 
 export const EventContext = React.createContext();
 
@@ -6,6 +7,7 @@ export const EventDrinkProvider = (props) => {
   const [eventDrinks, setEventDrinks] = useState([]);
   const [drinks, setDrinks] = useState([]);
   const [events, setEvents] = useState([]);
+  const [event, setEvent] = useState([]);
 
   const getEventDrinks = (eventId) => {
     return fetch(`http://localhost:8088/eventDrinks?eventId=${eventId}`)
@@ -31,7 +33,7 @@ export const EventDrinkProvider = (props) => {
       },
       body: JSON.stringify({
         userId: parseInt(localStorage.getItem("app_user_id")),
-        startTime: Date.now(),
+        startTime: moment.now(),
         endTime: null,
       }),
     }).then((res) => res.json())
@@ -48,7 +50,7 @@ export const EventDrinkProvider = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        endTime: Date.now(),
+        endTime: moment.now(),
       }),
     }).then((res) => res.json())
       .then(() => {
@@ -56,6 +58,13 @@ export const EventDrinkProvider = (props) => {
       })
     
   };
+
+  const getEvent = () => {
+    const currentEventId = localStorage.getItem("currentEvent")
+    return fetch(`http://localhost:8088/events/${currentEventId}`)
+        .then(res => res.json())
+        .then(setEvent)
+}
 
   const addEventDrink = (drink) => {
     return fetch("http://localhost:8088/eventDrinks", {
@@ -88,7 +97,9 @@ export const EventDrinkProvider = (props) => {
         deleteEventDrink,
         endEvent,
         getEvents,
-        events
+        events,
+        getEvent,
+        event
       }}
     >
       {props.children}

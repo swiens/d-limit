@@ -38,11 +38,11 @@ export const Home = (props) => {
             Start Drinking
           </button>
         )}
-      </div>
+      {/* </div>
       useEffect(() => {
         getEvents(setEvents)
     }, [])
-      <div>
+      <div> */}
           
       </div>
 
