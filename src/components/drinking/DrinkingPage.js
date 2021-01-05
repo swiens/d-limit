@@ -1,6 +1,7 @@
 import React, {useContext,useEffect, useRef} from "react"
 import {EventContext} from "../eventDrinks/EventDrinkProvider"
 import moment from "moment"
+import "./drinking.css"
 
 
 export const DrinkingPage = (props) => {
@@ -18,7 +19,7 @@ export const DrinkingPage = (props) => {
         const newEventDrink = {
             drinkId: drinkId,
             eventId: eventId,
-            timeDrank: moment.now() 
+            timeDrank: moment.now()  
         }
         addEventDrink(newEventDrink)
     
@@ -35,19 +36,19 @@ export const DrinkingPage = (props) => {
     return(
     
         <section>
-        <h1>What are you drinking?</h1> 
+        <h1 class="what-are-you-drinking-title">What are you drinking?</h1> 
         {
             drinks.map(d => (
                 <div>
-                <button onClick={eventDrink} key={d.id} ref={drink} value={d.id} id={d.id}>
+                <button class="alcohol--choice--button" onClick={eventDrink} key={d.id} ref={drink} value={d.id} id={d.id}>
                     {d.type}
                 </button>
                 </div>
             ))
 
         }
-        <button onClick={canIDriveButton}>Can I drive?</button>
-        <button onClick={editDrinks}>View/Edit Drinks</button>
+        <button class="can-i-drive-button" onClick={canIDriveButton}>Can I drive?</button>
+        <button class="edit-drinks-button" onClick={editDrinks}>View/Edit Drinks</button>
         </section>
     )
 }

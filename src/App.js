@@ -16,6 +16,7 @@ import {DrinkList} from "./components/drinking/DrinkList"
 import {ResultsPage} from "./components/drinking/ResultsPage"
 import {EventList} from "./components/eventDrinks/EventList"
 import { UserProvider} from './components/user/UserProvider'
+import {EventDetailsPage} from './components/eventDrinks/EventDetailsPage'
 
 
 
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/drinking/results/:eventId(\d+)" render={(props) => <ResultsPage {...props}/>} />
                   </UserProvider>
                   <Route exact path="/" render={(props) => <EventList {...props}/>} />
+                  <Route exact path="/event/detail/:eventId(\d+)" render={(props) => <EventDetailsPage {...props} />} />
                 </EventDrinkProvider>
 
                 <ContactProvider>

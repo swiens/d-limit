@@ -21,9 +21,10 @@ export const EditContactForm = (props) => {
     editContact({
       name: name.current.value,
       phoneNumber: phoneNumber.current.value,
-      id: currentContact.id
+      id: currentContact.id,
+      userId: parseInt(localStorage.getItem("app_user_id"))
     })
-      .then(() => props.history.push("/"))
+      .then(() => props.history.push("/contacts"))
   }
 
   const handleControlledInputChange = (event) => {

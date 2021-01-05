@@ -14,7 +14,7 @@ export const ContactForm = (props) => {
       phoneNumber: phoneNumber.current.value,
       userId: parseInt(localStorage.getItem("app_user_id"))
     })
-      .then(() => props.history.push("/"))
+      .then(() => props.history.push("/contacts"))
   }
   return (
     <main style={{ textAlign: "center" }}>

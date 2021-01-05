@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { EventContext } from "../eventDrinks/EventDrinkProvider";
 import moment from "moment";
 import { UserContext } from "../user/UserProvider";
+import "./drinking.css"
 
 export const ResultsPage = (props) => {
   const { endEvent, getEventDrinks, eventDrinks, event, getEvent } = useContext(
@@ -25,11 +26,19 @@ export const ResultsPage = (props) => {
   useEffect(() => {
     //this is where i will do my calculations
     // get hours since event started 
+    const now = moment()
+    const startTime = moment(parseInt(event.startTime))
+    const timeSinceEventInHours = now.diff(startTime, "hours", true)
+    // according to Widmark calculation. Metabolising rate is -0.015 every hour that goes by.
+    const bacTimeAdjust = 0.015
+    const timeAdjustForBac = timeSinceEventInHours * bacTimeAdjust
+
+    console.log(timeSinceEventInHours)
     const bodyWeightInGrams = user.weight * 454
     const alcoholConsumedInGrams = eventDrinks.length * 14
     const gender = 0.55
-    const BAC = (alcoholConsumedInGrams / (bodyWeightInGrams * gender))  * 100
-    setResult(BAC)
+    const BAC = ((alcoholConsumedInGrams / (bodyWeightInGrams * gender))  * 100) - timeAdjustForBac
+    setResult(BAC.toFixed(3))
   }, [user, event, eventDrinks])
 
 
@@ -47,10 +56,10 @@ export const ResultsPage = (props) => {
   if(result<0.08) {
       return(
         <section>
-        <h1>Results</h1>
-        <h2>You are good to drive</h2>
-        <button onClick={continueDrinkingButton}>Continue Drinking</button>
-        <button onClick={endEventButton}>End Event</button>
+        <h1 class="results--title">Results</h1>
+        <h2>You are good to drive, your Blood Alcohol Concentration is {result}</h2>
+        <button class="continue--drinking--button" onClick={continueDrinkingButton}>Continue Drinking</button>
+        <button class="end--drinking--button" onClick={endEventButton}>End Event</button>
       </section>
       )
 
@@ -58,10 +67,10 @@ export const ResultsPage = (props) => {
   else {
     return (
         <section>
-          <h1>Results</h1>
-          <h2> You Can't drive</h2>
-          <button onClick={continueDrinkingButton}>Continue Drinking</button>
-          <button onClick={endEventButton}>End Event</button>
+          <h1 class="results--title">Results </h1>
+          <h2> You Can't drive, your Blood Acohol Concentration is {result}</h2>
+          <button class="continue--drinking--button" onClick={continueDrinkingButton}>Continue Drinking</button>
+          <button class="end--drinking--button" onClick={endEventButton}>End Event</button>
         </section>
       );
   }
